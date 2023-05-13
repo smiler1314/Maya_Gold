@@ -1,0 +1,11 @@
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.idea/
+.history
+.cache
+.lib/
+.bsp
