@@ -39,8 +39,6 @@ object Main {
           case (wf, _, _) if wf.word == word => TopThreeWords(WordAndFreq(wf.word, one.freq + 1), two, three)
           case (_, wf, _) if wf.word == word => TopThreeWords(one, WordAndFreq(wf.word, two.freq + 1), three)
           case (_, _, wf) if wf.word == word => TopThreeWords(one, two, WordAndFreq(wf.word, three.freq + 1))
-          case (_, _, _) if freq > one.freq => TopThreeWords(WordAndFreq(word, freq), one, two)
-          case (_, _, _) if freq > two.freq => TopThreeWords(one, WordAndFreq(word, freq), two)
           case (_, _, _) if freq > three.freq => TopThreeWords(one, two, WordAndFreq(word, freq))
           case _ => TopThreeWords(one, two, three)
         }
